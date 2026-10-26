@@ -1,19 +1,13 @@
-/* Bowen Wu
-   Repository: https://github.com/Endless1010/CSE134BHw3 */
-
-/* Typography: font-family, color, and line-height are set once here and inherited */
 body {
   font-family: Georgia, "Times New Roman", serif;
   color: #2b2118;
   background: #fff8e7;
   line-height: 1.7;
-  /* Center the page and pad it */
   max-width: 42rem;
   margin: 0 auto;
   padding: 2rem 1.5rem;
 }
 
-/* rem units: h1 is larger than h2 */
 h1 {
   font-size: 2.75rem;
   line-height: 1.2;
@@ -68,9 +62,6 @@ button {
   cursor: pointer;
 }
 
-/* Cascade: both rules have the same selector (a) and set color.
-   The second one wins because, at equal specificity, the rule that
-   appears later in the stylesheet overrides the earlier one. */
 a {
   color: #1b6ca8;
 }
@@ -79,7 +70,6 @@ a {
   color: #9c3d00;
 }
 
-/* Hover and focus */
 a:hover {
   color: #5a2300;
   background: #ffe9b8;

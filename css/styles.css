@@ -1,8 +1,3 @@
-/* Bowen Wu portfolio, CSE 134B HW3
-   Repository: https://github.com/Endless1010/CSE134BHw3
-   One shared stylesheet for every page. */
-
-/* ---------- Design tokens ---------- */
 :root {
   --color-text: #1f2430;
   --color-muted: #566074;
@@ -18,7 +13,6 @@
   --radius: 0.5rem;
 }
 
-/* ---------- Base typography (set once, inherited) ---------- */
 html {
   font-size: 100%;
 }
@@ -65,7 +59,6 @@ small {
   font-size: 0.875rem;
 }
 
-/* ---------- Shared page frame: header, nav, main, footer ---------- */
 body > header,
 body > footer {
   background: var(--color-surface);
@@ -98,7 +91,6 @@ main {
   padding: 2rem 1.5rem 0;
 }
 
-/* Navigation (Flexbox): used in the header and the footer */
 nav ul {
   display: flex;
   flex-wrap: wrap;
@@ -119,37 +111,30 @@ nav a:hover {
   background: var(--color-border);
 }
 
-/* Attribute selector: the link for the page being viewed (aria-current="page") */
 nav a[aria-current="page"] {
   background: var(--color-accent);
   color: var(--color-surface);
   font-weight: 600;
 }
 
-/* Attribute selector: links to PDF files are set in semibold so downloads stand out */
 a[type="application/pdf"] {
   font-weight: 600;
 }
 
-/* Footer links are quieter than header links */
 footer nav a {
   padding: 0.25em 0.6em;
   font-size: 0.9375rem;
 }
 
-/* Descendant combinator: the footer's copyright text and any link inside it */
 footer small {
   color: var(--color-muted);
 }
 
-/* ---------- Page content ---------- */
-/* Adjacent sibling: the paragraph right after a page's h1 is the lead-in */
 h1 + p {
   font-size: 1.125rem;
   color: var(--color-muted);
 }
 
-/* Child combinator: only top-level sections of main get a divider between them */
 main > section {
   margin-top: 2.5rem;
 }
@@ -158,14 +143,12 @@ main > section > h2:first-child {
   margin-top: 0;
 }
 
-/* Card grid (Grid): any section whose direct children include articles */
 main > section:has(> article) {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   gap: var(--space);
 }
 
-/* Headings and loose paragraphs span the whole grid; only articles are cards */
 main > section:has(> article) > :not(article) {
   grid-column: 1 / -1;
   margin: 0;
@@ -182,25 +165,21 @@ article > h3:first-child {
   margin-top: 0;
 }
 
-/* Subsequent sibling: paragraphs that follow a card heading stay tight */
 article h3 ~ p:last-of-type {
   margin-bottom: 0;
 }
 
-/* Case-study pages: the article inside main is the whole page, not a card */
 main > article > header p {
   font-size: 1.125rem;
   color: var(--color-muted);
 }
 
-/* Portrait */
 picture img {
   display: block;
   border-radius: var(--radius);
   margin-bottom: var(--space);
 }
 
-/* Custom element: <tech-stack> (a row of technology tags) */
 tech-stack {
   display: block;
   margin: 0.75em 0;
@@ -216,7 +195,6 @@ tech-stack > span {
   font-size: 0.875rem;
 }
 
-/* Breadcrumb and previous/next navigation inside project pages */
 main > nav[aria-label="Breadcrumb"] p {
   margin: 0 0 1.5rem;
   color: var(--color-muted);
@@ -232,7 +210,6 @@ main > nav[aria-label="More projects"] ul {
   justify-content: space-between;
 }
 
-/* ---------- Forms ---------- */
 fieldset {
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
@@ -246,7 +223,6 @@ legend {
   padding: 0 0.5rem;
 }
 
-/* Each label/field pair is a div; space them out */
 fieldset > div + div {
   margin-top: var(--space);
 }
@@ -299,7 +275,6 @@ iframe {
   border-radius: var(--radius);
 }
 
-/* ---------- Keyboard focus: always visible ---------- */
 a:focus,
 button:focus,
 input:focus,
@@ -316,7 +291,6 @@ button:focus {
   outline-color: var(--color-text);
 }
 
-/* ---------- Narrow screens ---------- */
 @media (max-width: 40rem) {
   h1 { font-size: 2rem; }
   h2 { font-size: 1.5rem; }
@@ -330,7 +304,6 @@ button:focus {
     padding-inline: var(--space);
   }
 
-  /* Header nav becomes a two-column grid of large touch targets */
   body > header nav ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
