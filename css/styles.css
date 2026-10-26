@@ -53,11 +53,11 @@ a:hover {
   text-decoration-thickness: 0.15em;
 }
 
-img, iframe, video, canvas {
+img, iframe, video, canvas, svg {
   max-width: 100%;
 }
 
-img, video {
+img, video, svg {
   height: auto;
 }
 
