@@ -1,5 +1,3 @@
-/* Bowen Wu portfolio, shared stylesheet
-   Repository: https://github.com/Endless1010/CSE134BHw3 */
 
 :root {
   --color-text: #1f2430;
@@ -114,14 +112,12 @@ nav a:hover {
   background: var(--color-border);
 }
 
-/* Attribute selector: targets the nav link for the page being viewed */
 nav a[aria-current="page"] {
   background: var(--color-accent);
   color: var(--color-surface);
   font-weight: 600;
 }
 
-/* Attribute selector: targets links to PDF files */
 a[type="application/pdf"] {
   font-weight: 600;
 }
@@ -131,18 +127,15 @@ footer nav a {
   font-size: 0.9375rem;
 }
 
-/* Descendant combinator: targets the small copyright text anywhere inside a footer */
 footer small {
   color: var(--color-muted);
 }
 
-/* Adjacent sibling combinator: targets the paragraph directly after an h1 */
 h1 + p {
   font-size: 1.125rem;
   color: var(--color-muted);
 }
 
-/* Child combinator: targets only sections that are direct children of main */
 main > section {
   margin-top: 2.5rem;
 }
@@ -173,7 +166,6 @@ article > h3:first-child {
   margin-top: 0;
 }
 
-/* Subsequent sibling combinator: targets paragraphs that follow an h3 inside an article */
 article h3 ~ p:last-of-type {
   margin-bottom: 0;
 }
