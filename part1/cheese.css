@@ -1,3 +1,6 @@
+/* Bowen Wu
+   Repository: https://github.com/Endless1010/CSE134BHw3 */
+
 body {
   font-family: Georgia, "Times New Roman", serif;
   color: #2b2118;
@@ -62,6 +65,8 @@ button {
   cursor: pointer;
 }
 
+/* Cascade: both rules use the same selector (a) and set color.
+   The second wins because, at equal specificity, the later rule overrides the earlier one. */
 a {
   color: #1b6ca8;
 }
